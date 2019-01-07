@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="css\nomoredame.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>nomoredame</title>
+  <!-- typekitの読み込み -->
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'nhe2ajd',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+  <!-- typekitの読み込み↑ここまで -->
+  </head>
+  <body>
+  <div class="wrap doing">
+      <header>
+        <h1>No more だめ</h1>
+      </header>
+    <div class="description">
+      <p>これは「何もしたくない」という状態にならないためのアプリです。自分を気持ちよくする行動が出てくるので、気に入ったものがあったら<strong>やるボタン</strong>を押してみましょう。</p>
+      <i class="fas fa-times-circle"></i>
+    </div>
+<!-- アクションカード選択部分-->
+      <div class="action_card">
+        <!-- <h1>お気に入りの曲を口ずさむ</h1> -->
+        <h1 id="target_1"></h1>
+        <!-- <img src="img\actioncardimg_sing.jpg" alt="歌う人"> -->
+        <span id="target_2"></span>
+        <!-- <p>お気に入りの音楽をスピーカーやヘッドフォンで聞き、できれば口ずさみます。元気な時にお気に入りの曲リストを作っておきましょう。</p>
+        <p>STEP1:Youtube(音楽サービス)を開こう。</p> -->
+        <p id="target_3"></p>
+        <p id="target_4"></p>
+      </div>
+<!--アクションカードに対する行動ボタン-->
+      <form >
+        <input  type="button" onclick="location.href='./done.html'" value="やった">
+        <!-- <br> -->
+        <!-- <input type="submit" value="やった"> -->
+      </form>
+<!--ナビゲーションバー-->
+    <nav id="target">
+      <ul class="navigation">
+        <li><a href="list.html">リスト</a></li>
+        <li><a href="home.html">ホーム</a></li>
+        <li><a href="notification.html">通知</a></li>
+      </ul>
+    </nav>
+  </div>
+
+    <script>
+      'use strict';
+
+      {
+        const actions = [
+          'お気に入りの歌を口ずさむ',
+          '銭湯に行く',
+          '外に散歩に行く',
+        ];
+        const actions_image = [
+          // 画像をイメージフォルダに入れると動かないのを直したい
+          '<img src="actioncardimg_sing.jpg" alt="歌う人">',
+          '<img src="actioncardimg_publicbath.jpg" alt="風呂に入る猿">',
+          '<img src="actioncardimg_sing_walking.jpg" alt="歩くガチョウ">',
+        ];
+
+
+        const actions_description = [
+          'お気に入りの音楽をスピーカーやヘッドフォンで聞き、できれば口ずさみます。',
+          '銭湯は心と体をリフレッシュできる場所。近くの銭湯に行ってみましょう。',
+          '外に出ること、歩くことは脳にいい刺激をもたらし、気分転換になります。',
+        ];
+
+        const actions_firststep = [
+          'STEP1:Youtube(or他の音楽サービス)を開こう',
+          'STEP1:タオルと下着をバッグに詰めよう',
+          'STEP1:靴を履こう',
+        ];
+
+        const target_1 = document.getElementById('target_1');
+        const target_2 = document.getElementById('target_2');
+        const target_3 = document.getElementById('target_3');
+        const target_4 = document.getElementById('target_4');
+
+        const action_number = Math.floor(Math.random() * actions.length);
+        target_1.textContent = actions[action_number];
+        target_2.innerHTML = actions_image[action_number];// テキストじゃなく画像なのでinnerHTMLというのにしてみた
+        target_3.textContent = actions_description[action_number];
+        target_4.textContent = actions_firststep[action_number];
+
+        // クリックされたら文字色を変える。ただし、その瞬間にフォームがリフレッシュされてしまい一瞬しか表示されない
+        document.getElementById('target').addEventListener('click', function() {
+          document.getElementById('target').style.color = 'pink';
+});
+
+      }
+    </script>
+
+  </body>
+</html>

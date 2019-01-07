@@ -1,0 +1,152 @@
+body{
+  font-family: Verdana,sans-serif;
+  background-color: #FFFFFF;
+  font-size: 3vw;
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  background-color: #fbfb53;
+  margin: 0;
+  padding: 5px;
+}
+
+h1{
+  text-align: center;
+  font-size: 4vw;
+  color: #468966;
+  font-family: vdl-v7marugothic, sans-serif;
+  font-weight: 700;
+}
+
+.wrap{
+  height: 94vh;
+  /* あまりちゃんとわかっていない。画面の大きさ（ビューポート）の94％になっている。なぜ100じゃない？ */
+}
+
+header>h1{
+  color: #468966;
+}
+.description{
+  background-color: #f8f7d1;
+  margin-top: 0;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.description>p{
+  margin: 0px 20px;
+  color: #bdb401;
+}
+
+.description>fa-times-circle{
+  text-align: right;
+}
+
+.action_card{
+  background-color: #fbfb53;
+  margin: 0 auto;
+  padding: 10px 20px;
+  max-width: 70%;
+  text-align: center;
+  border-radius: 16px;
+  color:#716b00;
+}
+
+.action_card img{
+  width:80%;
+  max-width: 100%;
+  height: auto;
+  border-radius:inherit;
+}
+
+form{
+  text-align:center;
+}
+
+form>input{
+  width:200px;
+  font-size:5vw;
+  font-family: vdl-v7marugothic, sans-serif;
+  font-weight: 700;
+  text-decoration:none;
+  margin: 20px;
+  text-align:center;
+  padding:8px 0 10px;
+  background-color:#ff6138;
+  border-radius:16px;
+  border: hidden;
+  color: #FFFFFF;
+
+}
+
+form>input:hover{
+  background-color: #468966;
+}
+
+a{
+  font-family: vdl-v7marugothic, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: #716b00;
+}
+
+a:hover{
+  color: #468966;
+}
+
+.navigation{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  background-color: #fbfb53;
+  padding-bottom: 0;
+  margin-top: auto;
+  margin-bottom: 0;
+
+
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  font-weight:bold;
+  list-style: none;
+  margin: 0px 20px;
+  padding: 10px;
+  color: #716b00;
+
+}
+
+/* done.htmlへのスタイル↓ */
+
+.favorite{
+  background-color: rgba(255,255,255,0.8);
+  max-width: 70%;
+  margin: 0px auto;
+  border-radius: 16px;
+  text-align: center;
+  padding: 10px;
+}
+
+ .done_wrap{
+  height: 94vh;
+  /* あまりちゃんとわかっていない。画面の大きさ（ビューポート）の94％になっている。なぜ100じゃない？*/
+  background-color: #fbfb53;
+}
+
+.done_message{
+  font-size: 8vw;
+}
+
+.fa-dove{
+}
+
+/* doing.htmlへのスタイル↓ */
+.doing input{
+  background-color: #468966;
+}
