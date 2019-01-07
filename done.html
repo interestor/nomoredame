@@ -33,9 +33,8 @@
         <i class="fas fa-dove fa-5x"></i>
         <i class="fas fa-dove fa-2x"></i>
         <h1 class="done_message">動けてえらい！<br>いいかんじ!</h1>
-        <p>Tips:元気なときに、落ち込んだ時用の曲リストを作っておくと便利だよ。</p>
-
-        <!-- <p id="target_5"></p> -->
+        <p id="target_5"></p><!-- action_numberの渡し方がわからないためtipsは選んだアクションと一致しない。要修正 -->
+        ここは
       </div>
 
 <!--アクションカードに対する行動ボタン-->
@@ -44,7 +43,7 @@
           <p>
             <input type="checkbox" name="favorite" value="1" checked="checked">このアクションをお気に入りにする
           </p>
-          <input type="submit" value="もどる">
+          <input type="button" onclick="location.href='./home.html'" value="もどる">
           <!-- <br> -->
           <!-- <input type="submit" value="やった"> -->
         </form>
@@ -59,6 +58,8 @@
     </nav>
   </div>
 
+  <h1 hidden id="target_1"></h1>
+
     <script>
       'use strict';
 
@@ -68,45 +69,23 @@
           '銭湯に行く',
           '外に散歩に行く',
         ];
-        const actions_image = [
-          // 画像をイメージフォルダに入れると動かないのを直したい
-          '<img src="actioncardimg_sing.jpg" alt="歌う人">',
-          '<img src="actioncardimg_publicbath.jpg" alt="風呂に入る猿">',
-          '<img src="actioncardimg_sing_walking.jpg" alt="歩くガチョウ">',
-        ];
-
-
-        const actions_description = [
-          'お気に入りの音楽をスピーカーやヘッドフォンで聞き、できれば口ずさみます。',
-          '銭湯は心と体をリフレッシュできる場所。近くの銭湯に行ってみましょう。',
-          '外に出ること、歩くことは脳にいい刺激をもたらし、気分転換になります。',
-        ];
-
-        const actions_firststep = [
-          'STEP1:Youtube(or他の音楽サービス)を開こう',
-          'STEP1:タオルと下着をバッグに詰めよう',
-          'STEP1:靴を履こう',
-        ];
 
         const actions_tips = [
-          'STEP1:Youtube(or他の音楽サービス)を開こう',
-          'STEP1:タオルと下着をバッグに詰めよう',
-          'STEP1:靴を履こう',
+          'Tips:元気なときに落ち込んだ時用の曲リストを作っておくと便利だよ',
+          'Tips:手ぬぐいを一枚カバンに入れておくと、外出先の空いた時間でもリフレッシュできるよ',
+          'Tips:お気に入りの靴を用意するだけで、なんとなく散歩の気分があがるよ',
         ];
 
+
         const target_1 = document.getElementById('target_1');
-        const target_2 = document.getElementById('target_2');
-        const target_3 = document.getElementById('target_3');
-        const target_4 = document.getElementById('target_4');
-        // const target_5 = document.getElementById('target_5');
+
+        const target_5 = document.getElementById('target_5');
 
         const action_number = Math.floor(Math.random() * actions.length);
         target_1.textContent = actions[action_number];
-        target_2.innerHTML = actions_image[action_number];// テキストじゃなく画像なのでinnerHTMLというのにしてみた
-        target_3.textContent = actions_description[action_number];
-        target_4.textContent = actions_firststep[action_number];
-        // target_5.textContent = actions_tips[action_number];
-        // action_numberの渡し方がわからないためtipsは↑動かない
+
+        target_5.textContent = actions_tips[action_number];
+        // action_numberの渡し方がわからないためtipsは選んだアクションと一致しない。
 
       }
     </script>
