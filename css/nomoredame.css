@@ -61,6 +61,11 @@ header>h1{
   border-radius:inherit;
 }
 
+.fa-sync-alt{
+  color: #bdb401;
+  font-size: 4vw;
+}
+
 form{
   text-align:center;
 }
