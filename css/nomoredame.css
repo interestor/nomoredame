@@ -130,8 +130,8 @@ li{
 /* done.htmlへのスタイル↓ */
 
 .favorite{
-  background-color: rgba(255,255,255,0.8);
   max-width: 70%;
+  background-color:  #f8f7d1;
   margin: 0px auto;
   border-radius: 16px;
   text-align: center;
@@ -149,6 +149,7 @@ li{
 }
 
 .fa-dove{
+  color:#bdb401;
 }
 
 /* doing.htmlへのスタイル↓ */
