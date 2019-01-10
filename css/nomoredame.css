@@ -90,6 +90,11 @@ form>input:hover{
   background-color: #468966;
 }
 
+/* ボタンを1度押した↓後の色 */
+.done_button{
+  background-color: #468966;
+}
+
 a{
   font-family: vdl-v7marugothic, sans-serif;
   font-weight: 700;
@@ -152,7 +157,38 @@ li{
   color:#bdb401;
 }
 
-/* doing.htmlへのスタイル↓ */
-.doing input{
+
+
+
+/* アクションリスト部分 */
+
+.actionlist{
   background-color: #468966;
+  width: 100px;
+  height: 100px;
 }
+
+
+.edit_action{
+  width: 80%;
+  height: 80%;
+
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    background: skyblue;
+    cursor: pointer;
+    transition: 0.8s;
+    margin: 0 8px 8px 0;
+  }
+  .circle {
+    background: pink;
+    border-radius: 50%;
+    transform: rotate(360deg);
+  }

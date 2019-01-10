@@ -25,7 +25,7 @@
         <h1>No more だめ</h1>
       </header>
     <div class="description">
-      <p>これは「何もしたくない」という状態にならないためのアプリです。自分を気持ちよくする行動が出てくるので、気に入ったものがあったら<strong>やるボタン</strong>を押してみましょう。</p>
+      <p>これは「何もしたくない」という状態にならないためのアプリです。自分を気持ちよくする行動が出てくるので、気に入ったものがあったら<strong>やるぞ！ボタン</strong>を押して行動してみましょう。</p>
       <i class="fas fa-times-circle"></i>
     </div>
 <!-- アクションカード部分-->
@@ -44,13 +44,15 @@
       </div>
 <!--アクションカードに対する行動ボタン-->
       <form >
-        <input type="button" onclick="location.href='./doing.html'" value="やる">
+        <!-- <input id="target" type="button" onclick="location.href='./doing.html'" value="やるぞ！"> -->
+
+        <input type="button" value="やるぞ！" id="target" onClick= "OnOff(this);">
 
         <!-- <br> -->
-        <!-- <input type="submit" value="やった"> -->
+        <!-- <input type="submit" value="おわった！"> -->
       </form>
 <!--ナビゲーションバー-->
-    <nav id="target">
+    <nav>
       <ul class="navigation">
         <li><a href="list.html">リスト</a></li>
         <li><a href="home.html">ホーム</a></li>
@@ -61,6 +63,17 @@
 
     <script>
       'use strict';
+
+      //ボタンを一度押すと色が変わり、に通すとdone.htmlに飛ぶ
+              function OnOff(lol){
+                if (lol.value == "やるぞ！") {
+                  lol.value = "おわった！";
+                  document.getElementById('target').classList.add('done_button');
+                  } else {
+                    document.location='done.html';
+                  }
+                }
+
 
       {
         const actions = [
@@ -88,6 +101,8 @@
           'STEP1:靴を履こう',
         ];
 
+//ランダムに生成したaction_numberのアクションカードのタイトル、画像、説明、ファーストステップを表示
+//後でオブジェクト名？をわかりやすいものに変えること
         const target_1 = document.getElementById('target_1');
         const target_2 = document.getElementById('target_2');
         const target_3 = document.getElementById('target_3');
@@ -98,13 +113,7 @@
         target_2.innerHTML = actions_image[action_number];// テキストじゃなく画像なのでinnerHTMLというのにしてみた
         target_3.textContent = actions_description[action_number];
         target_4.textContent = actions_firststep[action_number];
-
-        // クリックされたら文字色を変える。ただし、その瞬間にフォームがリフレッシュされてしまい一瞬しか表示されない
-        document.getElementById('target').addEventListener('click', function() {
-          document.getElementById('target').style.color = 'pink';
-});
-
-      }
+}
     </script>
 
   </body>
