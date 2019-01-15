@@ -21,12 +21,18 @@ h1{
 }
 
 .wrap{
-  height: 94vh;
-  /* あまりちゃんとわかっていない。画面の大きさ（ビューポート）の94％になっている。なぜ100じゃない？ */
+  width:100%;
+  height:100vh;
+  display: flex;
+  flex-direction:column;
 }
 
 header>h1{
   color: #468966;
+}
+
+.contents{
+  flex: 3;
 }
 .description{
   background-color: #f8f7d1;
