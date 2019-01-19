@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="css\nomoredame.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>nomoredame</title>
+  <!-- typekitの読み込み -->
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'nhe2ajd',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+  <!-- typekitの読み込み↑ここまで -->
+  </head>
+  <body>
+  <div class="wrap">
+      <header>
+        <h1>No more だめ</h1>
+      </header>
+
+<!-- リスト     -->
+  <div id = "list">
+
+  </div>
+
+  <i class="fas fa-plus-circle fa-5x add"></i>
+
+
+
+<!-- ナビゲーションバー -->
+    <nav>
+      <ul class="navigation">
+        <li><a href="list.html">リスト</a></li>
+        <li><a href="home.html">ホーム</a></li>
+        <li><a href="notification.html">通知</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <script>
+     'use strict';
+
+       const actions = [
+         'お気に入りの歌を口ずさむ',
+         '銭湯に行く',
+         '外に散歩に行く',
+       ];
+       var list = document.getElementById("list");
+
+       console.log(actions.length);
+
+       for(let i= 0; i < (actions.length); i++){　//変数actionの中に入っている数だけdivを作る
+         const div = document.createElement('div');
+         div.classList.add('list');
+         div.innerHTML = actions[i] + '&emsp;' +'<i class="fas fa-edit"></i>';
+         div.addEventListener('click',function(){
+           // ここに押された時の処理(各編集画面を開く)を書く
+         });
+
+         list.appendChild(div);
+       }
+
+
+   </script>
+
+  </body>
+</html>
