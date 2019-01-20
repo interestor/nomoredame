@@ -78,7 +78,7 @@ form{
   text-align:center;
 }
 
-form>input{
+.main_button{
   width:200px;
   font-size:5vw;
   font-family: vdl-v7marugothic, sans-serif;
@@ -204,4 +204,14 @@ body {
   bottom:50px;
   right:20px;
 
+}
+
+/* アクションリスト追加部分 */
+.new{
+  width: 90%;
+  box-sizing: border-box;
+  margin: 1em 0;
+  padding: .8em;
+  border-radius: 1em;
+  border: 2px solid #aaa;
 }

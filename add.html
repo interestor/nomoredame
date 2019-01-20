@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="css\nomoredame.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>nomoredame</title>
+  <!-- typekitの読み込み -->
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'nhe2ajd',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+  <!-- typekitの読み込み↑ここまで -->
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>No more だめ</h1>
+      </header>
+      <form>
+        <p>
+          <input class="new" type = "text" name =" actions" size = "50" maxlength="20" placeholder="ここにタイトルを書きます。例）銭湯に入る">
+        </p>
+        <!-- ここに画像の追加が入る -->
+        <p>
+          <textarea class="new" name = "actions_description" rows = "4" cols = "38" placeholder="どんなアクションですか？アクションについて短く説明します。例）銭湯は心と体をリフレッシュできる場所。近くの銭湯に行ってみましょう。"></textarea>
+        </p>
+        <p>
+          <textarea class="new" name =" actions_firststep" rows = "2" cols = "38" maxlength="100" placeholder="まず初めにすることは？例）タオルと下着をバッグに詰めよう"></textarea>
+        </p>
+        <p>
+          <textarea class="new" name =" actions_tips" rows = "2" cols = "38" placeholder="tipsやメモ書き。例）手ぬぐいを一枚カバンに入れておくと、外出先の空いた時間でもリフレッシュできるよ"></textarea>
+        </p>
+        <p>
+          <input class="main_button" type="submit" value="追加">
+        </p>
+      </form>
+      <!--ナビゲーションバー-->
+      <ul class="navigation">
+        <li><a href="list.html">リスト</a></li>
+        <li><a href="home.html">ホーム</a></li>
+        <li><a href="notification.html">通知</a></li>
+      </ul>
+    </div>
+  </body>
+  <html>
