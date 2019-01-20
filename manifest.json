@@ -1,0 +1,12 @@
+{
+  "lang": "ja",
+  "name": "nomoredame",
+  "short_name": "NoMoreDame",
+  "icons": [{
+        "src": "icon.png",
+        "sizes": "200x200",
+        "type": "image/png"
+      }],
+  "start_url": "https://nomoredame.firebaseapp.com/home.html",
+  "display": "standalone"
+}
