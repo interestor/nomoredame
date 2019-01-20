@@ -5,6 +5,20 @@
     <link rel="stylesheet" type="text/css" href="css\nomoredame.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- PWA化 -->
+    <!-- 参考https://techblog.asahi-net.co.jp/entry/2018/07/06/145931 -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--アイコン-->
+    <link rel="apple-touch-icon" href="iconV2.png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <!--manifest.jsonの読み込み-->
+    <link rel="manifest" href="manifest.json">
+    <!-- PWA化 ココまで-->
+
     <title>nomoredame</title>
   <!-- typekitの読み込み -->
     <script>
@@ -115,6 +129,15 @@
         target_4.textContent = actions_firststep[action_number];
 }
     </script>
+    <!--ServiceWorkerの登録（成功したらログを表示）-->
+   <script  type="application/javascript">
+    if('serviceWorker' in navigator){
+     navigator.serviceWorker.register('serviceworker.js').then(function(){
+       console.log('Service Worker Registered');
+     });
+    }
+ </script>
+   <!--ServiceWorkerの読み込み　終わり-->
 
   </body>
 </html>
