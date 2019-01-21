@@ -9,9 +9,8 @@
     <!-- 参考https://techblog.asahi-net.co.jp/entry/2018/07/06/145931 -->
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--アイコン-->
-    <link rel="apple-touch-icon" href="iconV2.png">
+    <link rel="apple-touch-icon" href="icon.png">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
@@ -61,7 +60,7 @@
         <form>
           <!-- <input id="target" type="button" onclick="location.href='./doing.html'" value="やるぞ！"> -->
 
-          <input class="main_button" type="button" value="やるぞ！" id="target" onClick= "OnOff(this);">
+          <input class="main_button" type="button" value="やるぞ!" id="target" onClick= "OnOff(this);">
 
           <!-- <br> -->
           <!-- <input Stype="submit" value="おわった！"> -->
@@ -127,17 +126,15 @@
         target_2.innerHTML = actions_image[action_number];// テキストじゃなく画像なのでinnerHTMLというのにしてみた
         target_3.textContent = actions_description[action_number];
         target_4.textContent = actions_firststep[action_number];
-}
-    </script>
-    <!--ServiceWorkerの登録（成功したらログを表示）-->
-   <script  type="application/javascript">
-    if('serviceWorker' in navigator){
-     navigator.serviceWorker.register('serviceworker.js').then(function(){
-       console.log('Service Worker Registered');
-     });
-    }
- </script>
-   <!--ServiceWorkerの読み込み　終わり-->
+      }
+      </script>
 
+          <script
+              window.addEventListener('load', function() {
+                  if ('serviceWorker' in navigator) {
+                      navigator.serviceWorker.register("/serviceworker.js");
+                  }
+              });
+          </script>
   </body>
 </html>
