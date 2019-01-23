@@ -20,9 +20,9 @@
     ];
     const actions_image = [
       // 画像をイメージフォルダに入れると動かないのを直したい
-      '<img src="actioncardimg_sing.jpg" alt="歌う人">',
-      '<img src="actioncardimg_publicbath.jpg" alt="風呂に入る猿">',
-      '<img src="actioncardimg_sing_walking.jpg" alt="歩くガチョウ">',
+      '<img src="img/actioncardimg_sing.jpg" alt="歌う人">',
+      '<img src="img/actioncardimg_publicbath.jpg" alt="風呂に入る猿">',
+      '<img src="img/actioncardimg_sing_walking.jpgg" alt="歩くガチョウ">',
     ];
 
 
