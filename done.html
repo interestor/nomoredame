@@ -24,16 +24,11 @@
       <header>
         <h1>No more だめ</h1>
       </header>
-    <!-- <div class="description">
-      <p>これは「何もしたくない」という状態にならないためのアプリです。自分を気持ちよくする行動が出てくるので、気に入ったものがあったら<strong>やるボタン</strong>を押してみましょう。</p>
-      <i class="fas fa-times-circle"></i>
-    </div> -->
-
       <div class="action_card">
         <i class="fas fa-dove fa-5x"></i>
         <i class="fas fa-dove fa-2x"></i>
         <h1 class="done_message">動けてえらい！<br>いいかんじ!</h1>
-        <p id="target_5"></p><!-- action_numberの渡し方がわからないためtipsは選んだアクションと一致しない。要修正 -->
+        <p id="actions_tip"></p><!-- action_numberの渡し方がわからないためtipsは選んだアクションと一致しない。要修正 -->
       </div>
 
 <!--アクションカードに対する行動ボタン-->
@@ -57,37 +52,9 @@
     </nav>
   </div>
 
-  <h1 hidden id="target_1"></h1>
 
-    <script>
-      'use strict';
-
-      {
-        const actions = [
-          'お気に入りの歌を口ずさむ',
-          '銭湯に行く',
-          '外に散歩に行く',
-        ];
-
-        const actions_tips = [
-          'Tips:元気なときに落ち込んだ時用の曲リストを作っておくと便利だよ',
-          'Tips:手ぬぐいを一枚カバンに入れておくと、外出先の空いた時間でもリフレッシュできるよ',
-          'Tips:お気に入りの靴を用意するだけで、なんとなく散歩の気分があがるよ',
-        ];
-
-
-        const target_1 = document.getElementById('target_1');
-
-        const target_5 = document.getElementById('target_5');
-
-        const action_number = Math.floor(Math.random() * actions.length);
-        target_1.textContent = actions[action_number];
-
-        target_5.textContent = actions_tips[action_number];
-        // action_numberの渡し方がわからないためtipsは選んだアクションと一致しない。
-
-      }
-    </script>
+    <!-- JavaScriptファイルの読み込み -->
+    <script type="text/javascript" src="js/done.js"></script>
 
   </body>
 </html>
