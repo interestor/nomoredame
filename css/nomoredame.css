@@ -235,15 +235,21 @@ body {
   width:50%;
 }
 
-.doing_modal p{
+.doing_modal h1{
   font-size: 10vw;
   color:#468966;
   margin:10px;
   font-family: vdl-v7marugothic, sans-serif;
   font-weight: 700;
-
 }
 
+.doing_modal h2{
+  text-align: center;
+  font-size: 4vw;
+  color: #468966;
+  font-family: vdl-v7marugothic, sans-serif;
+  font-weight: 700;
+}
 .done_button{
   width:200px;
   font-size:5vw;
