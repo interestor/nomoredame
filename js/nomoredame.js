@@ -232,14 +232,20 @@ mask.addEventListener('click',function(){
   modal.className = 'hidden';
 });
 
+//完了画面の表示
+var done = document.getElementById('done_window');
+open.addEventListener('click',function(){
+  done_window.className = 'done_window';
+});
 
-// {// PWA化
-//   // サービスウォーカーを設定
-//   window.addEventListener('load', function() {
-//       if ('serviceWorker' in navigator) {
-//           navigator.serviceWorker.register("/serviceworker.js");
-//       }
-//   });
+
+// PWA化
+  // サービスウォーカーを設定
+  window.addEventListener('load', function() {
+      if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register("/serviceworker.js");
+      }
+  });
 
   // プッシュ通知の許可を得る
   //後々は通知画面で表示するようにする
